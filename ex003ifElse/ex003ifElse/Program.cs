@@ -1,18 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-string[] valores = Console.ReadLine().Split(' ');
-int horaInicial = int.Parse(valores[0]);
-int horaFinal = int.Parse(valores[1]);
+string[] numeros = Console.ReadLine().Split(' ');
 
-int duracao;
+int a = int.Parse(numeros[0]);
+int b = int.Parse(numeros[1]);
 
-if(horaInicial < horaFinal)
+if (a % b == 0)
 {
-    duracao = horaFinal - horaInicial;
+    Console.WriteLine("São Multiplos!");
 }
-else
+else if (b % a == 0)
 {
-    duracao = 24 - horaInicial + horaFinal;
+    Console.WriteLine("São Multiplos!");
 }
-
-Console.WriteLine($"O jogo durou {duracao} horas!");
+else 
+{
+    Console.WriteLine("Não são Multiplos!");
+}
