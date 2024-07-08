@@ -23,7 +23,7 @@ namespace ex001ClassesAtributosMetodos
 
         public double Diagonal()
         {
-            return Math.Sqrt(Math.Sqrt(Largura) + Math.Sqrt(Altura));
+            return Math.Sqrt(Largura * Largura + Altura * Altura);
         }
 
     }
