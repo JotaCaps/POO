@@ -13,6 +13,10 @@ namespace exGeral
         public string Nome;
         public double Valor;
 
+        public Conta()
+        { 
+        }
+        
         public Conta(int numero, string nome, double valor)
         {
             Numero = numero;
