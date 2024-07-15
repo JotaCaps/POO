@@ -13,7 +13,7 @@ string n = Console.ReadLine();
 Console.WriteLine("Havera deposito inicial? [S/N]");
 string r = Console.ReadLine();
 
-if (r == "s" || r == "s")
+if (r == "S" || r == "s")
 {
     Console.WriteLine("Entre o valor do depósito inicial: ");
     double d = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -30,7 +30,6 @@ else
 
  Console.WriteLine("Entre um valor para deposito: ");
  double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
  conta.Deposito(deposito);
 
  Console.WriteLine("Dados atualizados: ");
@@ -38,7 +37,6 @@ else
 
  Console.WriteLine("Entre um valor para saque: ");
  double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
  conta.Saque(saque);
 
  Console.WriteLine("Dados atualizados: ");
