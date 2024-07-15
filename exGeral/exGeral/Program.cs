@@ -2,6 +2,8 @@
 using exGeral;
 using System.Globalization;
 
+Conta conta;
+
 Console.WriteLine("Entre com o número da conta: ");
 int c = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
@@ -11,54 +13,38 @@ string n = Console.ReadLine();
 Console.WriteLine("Havera deposito inicial? [S/N]");
 string r = Console.ReadLine();
 
-if (r == "N")
+if (r == "s" || r == "s")
 {
-    Conta conta = new Conta(c, n);
-
-    Console.WriteLine("Dados da conta: ");
-    Console.WriteLine(conta);
-
-    Console.WriteLine("Entre um valor para deposito: ");
-    double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-    
-    conta.Deposito(deposito);
-    
-    Console.WriteLine("Dados atualizados: ");
-    Console.WriteLine(conta);
-
-    Console.WriteLine("Entre um valor para saque: ");
-    double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-    conta.Saque(saque);
-
-    Console.WriteLine("Dados atualizados: ");
-    Console.WriteLine(conta);
-} else
-{
-    Console.WriteLine("Entre o valor do depósito: ");
+    Console.WriteLine("Entre o valor do depósito inicial: ");
     double d = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-    Conta conta = new Conta(c, n, d);
+    conta = new Conta(c, n, d);
 
     Console.WriteLine("Dados da conta: ");
     Console.WriteLine(conta);
-
-    Console.WriteLine("Entre um valor para deposito: ");
-    double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-    
-    conta.Deposito(deposito);
-    
-    Console.WriteLine("Dados atualizados: ");
-    Console.WriteLine(conta);
-
-    Console.WriteLine("Entre um valor para saque: ");
-    double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-    conta.Saque(saque);
-
-    Console.WriteLine("Dados atualizados: ");
-    Console.WriteLine(conta);
 }
+else
+{
+    conta = new Conta(c, n);
+}
+
+ Console.WriteLine("Entre um valor para deposito: ");
+ double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+ conta.Deposito(deposito);
+
+ Console.WriteLine("Dados atualizados: ");
+ Console.WriteLine(conta);
+
+ Console.WriteLine("Entre um valor para saque: ");
+ double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+ conta.Saque(saque);
+
+ Console.WriteLine("Dados atualizados: ");
+ Console.WriteLine(conta);
+
+
 
 
 

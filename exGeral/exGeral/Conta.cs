@@ -9,9 +9,24 @@ namespace exGeral
 {
     internal class Conta
     {
-        public int Numero;
-        public string Nome;
-        public double Valor;
+        private int _numero;
+        private string _nome;
+        private double _valor;
+
+        public int Numero
+        {  get { return _numero; }        
+        }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set { value = _nome; }
+        }
+
+        public double Valor
+        {
+            get { return _valor; }
+        }
 
         public Conta()
         { 
@@ -19,26 +34,25 @@ namespace exGeral
         
         public Conta(int numero, string nome, double valor)
         {
-            Numero = numero;
+            _numero = numero;
             Nome = nome;
-            Valor = valor;
+            _valor = valor;
         }
 
         public Conta(int numero, string nome)
         {
-            Numero = numero;
+            _numero = numero;
             Nome = nome;
-            Valor = 0.0;
         }
 
         public void Deposito(double deposito)
         {
-            Valor += deposito;
+            _valor += deposito;
         }
 
         public void Saque(double saque)
         {
-            Valor -= (saque + 5.00);
+            _valor -= (saque + 5.00);
         }
 
         public override string ToString()
