@@ -18,15 +18,8 @@ for (int i = 0; i < n; i++)
     string email = Console.ReadLine();
     Console.Write("Quarto: ");
     int quarto = int.Parse(Console.ReadLine());
-    
-    if (vect[quarto] != null)
-    {
-        Console.WriteLine("Quarto Ocupado! Escolha outro: ");
-    }
-    else
-    {
-        vect[quarto] = new Aluno(nome, email);
-    }   
+
+    vect[quarto] = new Aluno(nome, email);   
 }
 
 for (int i = 0; i < 10; i++)
