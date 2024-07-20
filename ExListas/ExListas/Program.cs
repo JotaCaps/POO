@@ -8,7 +8,7 @@ int r = int.Parse(Console.ReadLine());
 
 List<Employee> funcionarios = new List<Employee>();
 
-for (int i = 0; i < r; i++)
+for (int i = 1; i <= r; i++)
 {
     Console.WriteLine("Employee #" + i + ":");
 
