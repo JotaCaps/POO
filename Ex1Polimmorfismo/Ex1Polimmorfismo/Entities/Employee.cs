@@ -30,7 +30,7 @@ namespace Ex1Polimmorfismo.Entities
         public override string ToString()
         {
             return Name
-                   + " - $"
+                   + " - $ "
                    + Payment().ToString("F2", CultureInfo.InvariantCulture);
         }
     }

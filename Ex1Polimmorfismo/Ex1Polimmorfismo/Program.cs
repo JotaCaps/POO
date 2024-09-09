@@ -11,34 +11,27 @@ for (int i = 1; i <= n; i++)
 {
     Console.WriteLine($"Employee #{i} data: ");
     Console.Write("Outsourced (y/n)?");
-    string r = (Console.ReadLine());
-    if (r == "n")
-    {
-        Console.Write("Name: ");
-        string name = Console.ReadLine();
-        Console.Write("Hours: ");
-        int hours = int.Parse(Console.ReadLine());
-        Console.Write("Value per hours: ");
-        double valuePerHours = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+    char ch = char.Parse(Console.ReadLine());
+    Console.Write("Name: ");
+    string name = Console.ReadLine();
+    Console.Write("Hours: ");
+    int hours = int.Parse(Console.ReadLine());
+    Console.Write("Value per hours: ");
+    double valuePerHours = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-        list.Add(new Employee(name, hours, valuePerHours));
-    }
-    else
+    if (ch == 'y')
     {
-        Console.Write("Name: ");
-        string name = Console.ReadLine();
-        Console.Write("Hours: ");
-        int hours = int.Parse(Console.ReadLine());
-        Console.Write("Value per hors: ");
-        double valuePerHours = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
         Console.Write("Additional charge: ");
         double addCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
         list.Add(new OutsourcedEmployee(name, hours, valuePerHours, addCharge));
     }
-
+    else 
+    {
+        list.Add(new Employee(name, hours, valuePerHours));
+    }    
 }
 
+Console.WriteLine();
 Console.WriteLine("Payments: ");
 foreach (Employee obj in list)
 {
