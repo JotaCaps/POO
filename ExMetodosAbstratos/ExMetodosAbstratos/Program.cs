@@ -36,5 +36,7 @@ for (int i = 0; i < n; i++)
 
 Console.WriteLine();
 Console.WriteLine("SHAPE AREAS: ");
-foreach(Shape shape in shapes)
-    Console.WriteLine(shape.Area().ToString("F2", CultureInfo.InvariantCulture));
+foreach (Shape shape in shapes)
+    {
+        Console.WriteLine(shape.Area().ToString("F2", CultureInfo.InvariantCulture));
+    }

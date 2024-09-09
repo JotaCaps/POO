@@ -11,8 +11,6 @@ namespace ExMetodosAbstratos.Entities
     {
         public double Radius { get; set; }
 
-        public Circle() { }
-
         public Circle(Color color, double radius)
             :base(color)
         {
@@ -21,7 +19,7 @@ namespace ExMetodosAbstratos.Entities
 
         public override double Area()
         {
-            return 3.14 * (Math.Pow(Radius, 2));
+            return Math.PI * Radius * Radius;
         }
     }
 }
