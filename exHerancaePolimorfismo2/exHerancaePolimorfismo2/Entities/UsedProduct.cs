@@ -21,7 +21,7 @@ namespace exHerancaePolimorfismo2.Entities
 
         public override string PriceTag()
         {
-            return Name + " (used) "
+            return Name + " (used) $ "
                 + Price.ToString("F2", CultureInfo.InvariantCulture) + 
                 " (Manufacture Date: " + ManufactureDate.ToString("dd/MM/yyyy") + ")";
         }
