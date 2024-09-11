@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExExceptions.Entities.Exeptions
 {
-    internal class DomainException
+    internal class DomainException : ApplicationException
     {
+        public DomainException(string message) : base(message) { }
+        
     }
 }
