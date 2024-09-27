@@ -8,17 +8,17 @@ namespace ExInterfaces.Services
 {
     class PayPalService : IOnlinePaymentService
     {
-        public double PaymentFee(double amount)
-        {
-            return amount += 0.02;
-        }
+        private const double FeePercentage = 0.02;
+        private const double MonthlyInterest = 0.01;
+
         public double Interest(double amount, int months)
         {
-            for (int i = 0; i < months; i++)
-            {
-                amount += 0.01 * i;
-            }
-            return amount;
+            return amount * MonthlyInterest * months;
+        }
+
+        public double PaymentFee(double amount)
+        {
+            return amount * FeePercentage;
         }
     }
 }
