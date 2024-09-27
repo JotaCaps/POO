@@ -8,5 +8,15 @@ namespace ExInterfaces.Entities
 {
     internal class Installment
     {
+        public DateTime Date { get; set; }
+        public double Amount { get; set; }
+
+        public Installment() { }
+
+        public Installment(DateTime date, double amount)
+        {
+            Date = date;
+            Amount = amount;
+        }
     }
 }
